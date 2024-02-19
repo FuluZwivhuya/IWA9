@@ -28,12 +28,17 @@ const rent = {
     'large-house': 2400,
 }
 
+
 // You can change below however you want
+const interp = [`${size}-${lodging}`];
+console.log(interp)
 
 const taxAsDecimal = tax[913] / 100
 const startingAfterTax = (salary*parseInt(tax[913]))/100
 const newStartingAfterTax = (salary - startingAfterTax)
 //console.log(newStartingAfterTax)
 const type = lodging + size
-const balance = newStartingAfterTax- expenses.transport- expenses.food - (rent["large-apartment"]);
+const balance = newStartingAfterTax- expenses.transport- expenses.food - (rent[interp]);
 console.log(balance.toFixed(2))
+
+//(rent["large-apartment"])
